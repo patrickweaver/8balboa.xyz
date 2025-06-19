@@ -1,7 +1,6 @@
 import express from "express";
 import { view } from "./view.js";
 import { nearbyArrivals } from "./transitData.js";
-import fetch from 'node-fetch';
 
 const app = express();
 
