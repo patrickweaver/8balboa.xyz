@@ -1,0 +1,35 @@
+{
+  "name": "sf-transit",
+  "version": "0.0.1",
+  "description": "An app using SFMTA transit data",
+  "main": "main.js",
+  "type": "module",
+  "engines": {
+    "node": 16
+  },
+  "scripts": {
+    "start": "node -r dotenv/config main.js",
+    "dev": "nodemon -r dotenv/config main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickweaver/sf-transit.git"
+  },
+  "author": "Patrick Weaver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickweaver/sf-transit/issues"
+  },
+  "homepage": "https://github.com/patrickweaver/sf-transit#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "gtfs-realtime-bindings": "^1.1.1",
+    "qs": "^6.11.2",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
