@@ -12,7 +12,7 @@ export function view(main, title = "") {
         />
         <meta property="og:title" content="8th and Balboa MUNI" id="og-title">
         <meta property="og:description" content="Nearby Arrivals" id="og-description">
-        <meta property="og:image" content="https://cdn.glitch.global/060163c8-9129-483e-b9f2-89200776e817/apr-pass.png?v=1744089978968" id="og-image">
+        <meta property="og:image" content="https://www.8balboa.xyz/image" id="og-image">
         <meta property="og:image:alt" content="A picture of a fast pass" id="og-image-alt">
         <title>8th and Balboa MUNI</title>
         <style>
@@ -63,7 +63,7 @@ export function view(main, title = "") {
           <div id="current-location"></div>
           <div id="nearby-arrivals"></div>
           ${main}
-          <div id="pass"><img src="https://cdn.glitch.global/060163c8-9129-483e-b9f2-89200776e817/apr-pass.png?v=1744089978968" /></div>
+          <div id="pass"><img src="/image" /></div>
         </main>
         <script>console.log('vercel')</script>
       </body>

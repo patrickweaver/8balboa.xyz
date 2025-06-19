@@ -2,6 +2,11 @@ import express from "express";
 const app = express();
 import { view } from "../api/view.js";
 import { nearbyArrivals } from "../api/transitData.js";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 app.get("/test", (req, res) => res.send("Express on Vercel"));
 
@@ -45,6 +50,10 @@ app.get("/api/nearby-arrivals", async (req, res) => {
   const _nearbyArrivals = await nearbyArrivals(lat, long);
   const nearbyArrivalsData = _nearbyArrivals.nearbyArrivals;
   res.json({ data: { nearbyArrivals: nearbyArrivalsData } });
+});
+
+app.get("/image", (req, res) => {
+  res.sendFile(__dirname + "/public/apr-pass.png");
 });
 
 app.listen(process.env.PORT, () =>
