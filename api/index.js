@@ -1,8 +1,9 @@
 import express from "express";
-import { view } from "./view.js";
-import { nearbyArrivals } from "./transitData.js";
-
 const app = express();
+import { view } from "../api/view.js";
+import { nearbyArrivals } from "../api/transitData.js";
+
+app.get("/test", (req, res) => res.send("Express on Vercel"));
 
 app.get("/", async (req, res) => {
   // res.send(view(""));
@@ -36,8 +37,8 @@ app.get("/api/nearby-arrivals", async (req, res) => {
   res.json({ data: { nearbyArrivals: nearbyArrivalsData } });
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${process.env.PORT}`);
-});
+app.listen(process.env.PORT, () =>
+  console.log(`Server ready on port ${process.env.PORT}.`)
+);
 
 export default app;
