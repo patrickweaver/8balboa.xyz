@@ -10,6 +10,16 @@ app.get("/", async (req, res) => {
   // return;
   const _nearbyArrivals = await nearbyArrivals();
   const nearbyArrivalsData = _nearbyArrivals.nearbyArrivals;
+  if (nearbyArrivalsData.length === 0) {
+    res.send(
+      view(`
+      <h3>Error</h3>
+      <p>Can’t load MUNI arrival times</p>
+    `)
+    );
+    return;
+  }
+
   const nearbyArrivalsList = nearbyArrivalsData.map((arrival) => {
     return `
       <li>
