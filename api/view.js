@@ -65,6 +65,7 @@ export function view(main, title = "") {
           ${main}
           <div id="pass"><img src="https://cdn.glitch.global/060163c8-9129-483e-b9f2-89200776e817/apr-pass.png?v=1744089978968" /></div>
         </main>
+        <script>console.log('vercel')</script>
       </body>
     </html>
   `;
